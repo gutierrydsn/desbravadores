@@ -1,0 +1,37 @@
+<!-- BEGIN SIDEBAR -->
+<div class="sidebar" ng-controller="sidebarController">
+    <div class="logopanel">
+        <h1>
+            <a href="#" style="background:none;">{{title}}</a>
+        </h1>
+    </div>
+    <div class="sidebar-inner">
+        <ul class="nav nav-sidebar">
+            <li id="Dashboard"  ng-show="user.userName=='admin'"    ng-class="{active : activeModule == modulesList.DASHBORD_DEFAULT}    " ng-click="setPage(modulesList.DASHBORD_DEFAULT)"         ><a href="#"><i class="mdi-action-home"               ></i><span>Dashboard</span></a></li>
+            <li id="Attendance" ng-show="user.userName=='vendedor'" ng-class="{active : activeModule == modulesList.ATTENDANCE}          " ng-click="setPage(modulesList.ATTENDANCE)"               ><a href="#"><i class="mdi-notification-phone-in-talk"></i><span>Atendimento</span></a></li>
+            <li id="Calendar"   ng-show="user.userName=='vendedor'" ng-class="{active : activeModule == modulesList.CALENDAR}            " ng-click="setPage(modulesList.CALENDAR)"                 ><a href="#"><i class="mdi-notification-event-note"   ></i><span>Agenda</span></a></li>
+            <li id="Indicator"  ng-show="user.userName=='vendedor'" ng-class="{active : activeModule == modulesList.INDICATOR}           " ng-click="setPage(modulesList.INDICATOR)"                ><a href="#"><i class="mdi-action-dashboard"          ></i><span>Indicadores</span></a></li>
+            <li id="PublicSale" ng-show="user.userName=='leilao'"   ng-class="{active : activeModule == modulesList.PUBLIC_SALE_PROGRESS}" ng-click="setPage(modulesList.PUBLIC_SALE_PROGRESS)"     ><a href="#"><i class="mdi-action-shopping-cart"      ></i><span>Leilões em andamento</span></a></li>
+            <li id="PublicSale" ng-show="user.userName=='leilao'"   ng-class="{active : activeModule == modulesList.PUBLIC_SALE_ACTIVE}  " ng-click="setPage(modulesList.PUBLIC_SALE_ACTIVE)"       ><a href="#"><i class="mdi-action-add-shopping-cart"  ></i><span>Leilões em participação</span></a></li>
+            <li id="PublicSale" ng-show="user.userName=='leilao'"   ng-class="{active : activeModule == modulesList.PUBLIC_SALE_ADM}     " ng-click="setPage(modulesList.PUBLIC_SALE_ADM)"          ><a href="#"><i class="mdi-action-visibility"         ></i><span>Admistrador de Leilão</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="quickview-sidebar">
+    <div class="logopanel">
+        <h1>
+            <a href="dashboard.html" style="background:none;">{{title}}</a>
+        </h1>
+    </div>
+    <div class="sidebar-inner">
+        <ul class="nav nav-sidebar">
+            <li class=" nav-active active"><a href="dashboard.html"><i class="mdi-action-home"></i><span>Dashboard</span></a></li>
+            <li class=" nav-active"><a href="dashboard.html"><i class="mdi-notification-phone-in-talk"></i><span>Atendimento</span></a></li>
+            <li class=" nav-active"><a href="dashboard.html"><i class="mdi-notification-event-note"></i><span>Agenda</span></a></li>
+            <li class=" nav-active"><a href="dashboard.html"><i class="mdi-action-shopping-cart"></i><span>Leilão</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- END SIDEBAR -->

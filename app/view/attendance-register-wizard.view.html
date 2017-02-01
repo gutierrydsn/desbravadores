@@ -1,0 +1,323 @@
+<div class="row">
+    <div class="col-md2">
+        <button ng-click="changeForRegisterWizard()" class="btn btn-success pull-right">Finalizar Atendimento</button>
+    </div>
+    <div class="col-md2">
+        <button ng-click="changeForRegisterWizard()" class="btn btn-danger pull-right">Cancelar Atendimento</button>
+    </div>
+</div>
+
+<div class="wizard-div current wizard-arrow" style="width: 100%">
+    <form class="wizard" data-style="arrow" role="form" style="width: 100%">
+        <fieldset>
+            <legend>Dados</legend>
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <div class="form-group m-b-30">
+                        <p>Nome</p>
+                        <input type="text" class="form-control empty" placeholder="Nome do Cliente">
+                    </div>
+                    <div class="form-group m-b-30">
+                        <p>Contato</p>
+                        <input type="text" class="form-control empty" placeholder="Contato">
+                    </div>
+                    <div class="form-group m-b-30">
+                        <p>CPF</p>
+                        <input type="text" class="form-control empty" placeholder="CPF">
+                    </div>
+                    <div class="form-group m-b-30">
+                        <p>Dt. Nascimento</p>
+                        <input type="text" class="b-datepicker form-control" placeholder="Select a date...">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="row" style="margin-bottom: 23px">
+                        <div class="col-md-12">
+                            <p>Tipo</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="radio radio-primary">
+                                    <label>
+                                        <input type="radio" name="selectTipo" value="option1" checked="" class="md-radio"><span class="circle"></span><span class="check"></span>
+                                        Fisica
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio radio-primary">
+                                    <label>
+                                        <input type="radio" name="selectTipo" value="option1" checked="" class="md-radio"><span class="circle"></span><span class="check"></span>
+                                        Juridica
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 24px">
+                        <div class="col-md-12">
+                            <p>Sexo</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="radio radio-primary">
+                                    <label>
+                                        <input type="radio" name="selectSexo" value="option1" checked="" class="md-radio"><span class="circle"></span><span class="check"></span>
+                                        Masculino
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio radio-primary">
+                                    <label>
+                                        <input type="radio" name="selectSexo" value="option1" checked="" class="md-radio"><span class="circle"></span><span class="check"></span>
+                                        Feminino
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group m-b-30 col-md-12" style="padding-left:-0px;padding-right:0px">
+                        <p>Estado Civil</p>
+                        <select class="form-control empty">
+                            <option value="volvo">Solteiro</option>
+                            <option value="saab">Casado</option>
+                            <option value="vw">Viuvo</option>
+                            <option value="audi" selected>Divorciado</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group m-b-30">
+                        <p>RG</p>
+                        <input type="text" class="form-control empty" placeholder="RG">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group m-b-30">
+                        <p>Telefone 1</p>
+                        <input type="text" class="form-control empty" placeholder="Telefone 1">
+                    </div>
+                    <div class="form-group m-b-30">
+                        <p>Telefone 2</p>
+                        <input type="text" class="form-control empty" placeholder="Telefone 2">
+                    </div>
+                    <div class="form-group m-b-30">
+                        <p>Telefone 3</p>
+                        <input type="text" class="form-control empty" placeholder="Telefone 3">
+                    </div>
+                    <div class="form-group m-b-30">
+                        <p>Email</p>
+                        <input type="text" class="form-control empty" placeholder="Email 3">
+                    </div>
+                    <div class="form-group m-b-30">
+                        <p>Facebook</p>
+                        <input type="text" class="form-control empty" placeholder="Facebook">
+                    </div>
+                </div>
+
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Interesse</legend>
+            <div class="col-md-12">
+                <div class="row" style="margin-bottom: 24px">
+                    <div class="col-md-12">
+                        <p>Interesse:</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="selectInteresse" value="option1" checked="" class="md-radio"><span class="circle"></span><span class="check"></span>
+                                    Novos
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="selectInteresse" value="option1" checked="" class="md-radio"><span class="circle"></span><span class="check"></span>
+                                    Usados
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="selectInteresse" value="option1" checked="" class="md-radio"><span class="circle"></span><span class="check"></span>
+                                    Corporativos
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group m-b-30">
+                            <p>Veiculo</p>
+                            <input type="text" class="form-control empty" placeholder="Veiculo">
+                        </div>
+                        <div class="form-group m-b-30">
+                            <p>Marca</p>
+                            <input type="text" class="form-control empty" placeholder="Marca">
+                        </div>
+                        <div class="form-group m-b-30">
+                            <p>Modelo</p>
+                            <input type="text" class="form-control empty" placeholder="Modelo">
+                        </div>
+                        <div class="form-group m-b-30">
+                            <p>Cor</p>
+                            <input type="text" class="form-control empty" placeholder="Cor">
+                        </div>
+                        <div class="form-group m-b-30">
+                            <p>Combustivel</p>
+                            <input type="text" class="form-control empty" placeholder="Combustivel">
+                        </div>
+                        <div class="form-group m-b-30">
+                            <p>Valor</p>
+                            <input type="text" class="form-control empty" placeholder="Valor">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p>Familia</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p>Disponiveis</p>
+                        <div style="color:#2e383c">
+                            <p>Carro 1</p>
+                            <p>Carro 2</p>
+                            <p>Carro 3</p>
+                            <p>Carro 4</p>
+                            <p>Carro 5</p>
+                            <p>Carro 6</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Test-Drive</legend>
+            <div class="col-md-12">
+                <div class="col-md-2">
+                    <div class="row" style="margin-bottom: 23px">
+                        <div class="col-md-12">
+                            <p>Test-Drive</p>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="selectTipo" value="option1" checked="" class="md-radio"><span class="circle"></span><span class="check"></span>
+                                    Novo
+                                </label>
+                            </div>
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="selectTipo" value="option1" checked="" class="md-radio"><span class="circle"></span><span class="check"></span>
+                                    Usado
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group m-b-30">
+                        <p>Modelo</p>
+                        <select class="form-control empty" style="width:80%">
+                            <option value="volvo">Modelo 1</option>
+                            <option value="saab">Modelo 2</option>
+                            <option value="vw">Modelo 3</option>
+                        </select>
+                    </div>
+                    <div class="form-group m-b-30">
+                        <p>Marca</p>
+                        <select class="form-control empty" style="width:80%">
+                            <option value="volvo">Marca 1</option>
+                            <option value="saab">Marca 2</option>
+                            <option value="vw">Marca 3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                </div>
+
+                <div class="row">
+                    <h2 style="vertical-align:middle">Historico de Test-Driver</h2>
+                    <table class="table">
+                        <thead>
+                        <tr role="row">
+                            <th class="text-center">
+                                Seq
+                            </th>
+                            <th class="text-center">
+                                Data
+                            </th>
+                            <th class="text-left">
+                                Modelo
+                            </th>
+                            <th class="text-center">
+                                Motivo de não realizar
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="text-center">
+                                <span>01</span>
+                            </td>
+                            <td class="text-center">
+                                <span>20/01/2017</span>
+                            </td>
+                            <td class="text-left">
+                                <span>Civic</span>
+                            </td>
+                            <td class="text-center">
+                                R$ <span class="item-price">Sem motivo</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Negociação</legend>
+            <div class="col-md-12">
+                Negociação
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>F&I Acessorios</legend>
+            <div class="col-md-12">
+                F&I Acessorios
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Registro</legend>
+            <div class="col-md-12">
+                Registro
+            </div>
+        </fieldset>
+
+    </form>
+</div>
+
+
+<script src="./js/plugins.js"></script>
+
+<script src="./plugins/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js"></script>
+<script src="./plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+

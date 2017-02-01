@@ -1,0 +1,48 @@
+<div class="col-md-12" ng-controller="publicSale" ng-show="selectedItem">
+    <div ng-include="'./app/view/publicSale.detail.view.html'"></div>
+</div>
+
+<div class="col-md-12" ng-controller="publicSale" ng-show="!selectedItem">
+    <h2>Leilões em andamento</h2>
+    <hr class="whiter" />
+
+    <div class="panel-content table-responsive">
+        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+            <div id="filter" class="row">
+
+            </div>
+            <div class="row">
+                <div class="col-sm-3" ng-repeat="item in carsList" style="margin-bottom:40px;padding-left:0px" ng-show="isPublicSaleProgress() || item.active">
+                    <h4>Acaba em {{item.endsIn}}</h4>
+                    <a href="#" ng-click="selectItem(item)">
+                        <img src={{item.images[0]}} class="img-responsive" style="width:250px;height:160px">
+                    </a>
+                    <div>Carro : {{item.model}}</div>
+                    <div>Ano : {{item.year}} / Cor : {{item.color}}</div>
+                    <div>Km : {{item.km}}</div>
+                    <div ng-show="!isPublicSaleProgress()">Meu Lance : <span style="color:#ff5417;font-weight: bold">R$ {{item.myBid}}</span></div>
+                    <div>Lance Atual R$ <span class="item-price">{{item.currentValue}}</span></div>
+                </div>
+            </div>
+            <div class="row" ng-show="false">
+                <div class="col-sm-5">
+                    <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite"></div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                        <ul class="pagination">
+                            <li class="paginate_button previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0">Anterior</a></li>
+                            <li class="paginate_button active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">1</a></li>
+                            <li class="paginate_button "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0">2</a></li>
+                            <li class="paginate_button "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0">3</a></li>
+                            <li class="paginate_button "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0">4</a></li>
+                            <li class="paginate_button next" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0">Proxima</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./js/pages/table_dynamic.js"></script>

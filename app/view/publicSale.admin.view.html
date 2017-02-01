@@ -1,0 +1,115 @@
+<div class="panel-content pagination2 table-responsive row" ng-controller="publicSale">
+    <div id="Details" class="panel-content pagination2 table-responsive" ng-show="!selectedBidHistory" >
+        <h2>ADM</h2>
+        <hr class="whiter" />
+        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+            <div id="filter" class="row">
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table">
+                        <thead>
+                        <tr role="row">
+                            <th class="text-center">
+                                Cod
+                            </th>
+                            <th class="text-center">
+                                Foto
+                            </th>
+                            <th class="text-center">
+                                Veículo
+                            </th>
+                            <th class="text-center">
+                                Ano
+                            </th>
+                            <th class="text-center">
+                                Preço inicial
+                            </th>
+                            <th class="text-center">
+                                Último lance
+                            </th>
+                            <th class="text-left">
+                                Dado por
+                            </th>
+                            <th class="text-center">
+                                Lucro
+                            </th>
+                            <th class="text-center">
+                                Visto
+                            </th>
+                            <th class="text-center">
+                                Lances
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody ng-repeat="item in carsList">
+                        <tr>
+                            <td class="text-center">
+                                <span> {{item.id}}</span>
+                            </td>
+                            <td class="text-center">
+                                <a href="#">
+                                    <img src={{item.images[0]}} alt="" class="img-responsive" style="width:80px;height:50px;margin-left:50px">
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <span>{{item.model}}</span>
+                            </td>
+                            <td class="text-center">
+                                <span>{{item.year}}</span>
+                            </td>
+                            <td class="text-center">
+                                R$ <span class="item-price">{{item.initialValue}}</span>
+                            </td>
+                            <td class="text-center">
+                                R$ <span class="item-price">{{item.currentValue}}</span>
+                            </td>
+                            <td class="text-left">
+                                {{item.currentValueBy}}
+                            </td>
+                            <td class="text-center">
+                                {{item.profit}}
+                            </td>
+                            <td class="text-center">
+                                {{item.countVisits}}
+                            </td>
+                            <td class="text-center">
+                                <a href="#" ng-click="showBidHistory()" >{{item.countBid}}</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite"></div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                        <ul class="pagination">
+                            <li class="paginate_button previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0">Anterior</a></li>
+                            <li class="paginate_button active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">1</a></li>
+                            <li class="paginate_button "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0">2</a></li>
+                            <li class="paginate_button "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0">3</a></li>
+                            <li class="paginate_button "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0">4</a></li>
+                            <li class="paginate_button next" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0">Proxima</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bidHistory" class="panel-content table-responsive" ng-show="selectedBidHistory">
+        <div class="row">
+            <div class="col-md-8"><h2>Historico de Lances</h2></div>
+            <div class="col-md-4"><a href="#"  ng-click="hideBidHistory()" class="pull-right mdi-action-exit-to-app"></a></div>
+        </div>
+        <hr class="whiter" />
+        <div ng-include="'./app/view/publicSale.admin.bidHistory.view.html'"></div>
+    </div>
+</div>
+
+<script src="./js/pages/table_dynamic.js"></script>

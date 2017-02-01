@@ -1,0 +1,58 @@
+<div class="col-md-12" ng-controller="publicSaleAdminBidHistory">
+    <div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+        <div class="row">
+            <table class="table">
+            <thead>
+            <tr role="row">
+                <th class="text-center">
+                    Cod
+                </th>
+                <th class="text-center">
+                    Data / Hora
+                </th>
+                <th class="text-left">
+                    Nome
+                </th>
+                <th class="text-center">
+                    Valor
+                </th>
+            </tr>
+            </thead>
+            <tbody ng-repeat="bid in bidHistory">
+            <tr>
+                <td class="text-center">
+                    <span> {{bid.cod}}</span>
+                </td>
+                <td class="text-center">
+                    <span> {{bid.dataTime}}</span>
+                </td>
+                <td class="text-left">
+                    <span> {{bid.name}}</span>
+                </td>
+                <td class="text-center">
+                    R$ <span class="item-price">{{bid.valor}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite"></div>
+            </div>
+            <div class="col-sm-7">
+                <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                    <ul class="pagination">
+                        <li class="paginate_button previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0">Anterior</a></li>
+                        <li class="paginate_button active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">1</a></li>
+                        <li class="paginate_button "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0">2</a></li>
+                        <li class="paginate_button "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0">3</a></li>
+                        <li class="paginate_button "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0">4</a></li>
+                        <li class="paginate_button next" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0">Proxima</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

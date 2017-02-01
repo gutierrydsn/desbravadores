@@ -1,0 +1,115 @@
+
+<div class="row">
+    <div class="col-md-8"><h2>{{selectedItem.model + ' ' + selectedItem.year}}</h2></div>
+    <div class="col-md-4"><a href="#"  ng-click="exitItemPublicSale()" class="pull-right mdi-action-exit-to-app"></a></div>
+</div>
+
+
+<hr class="whiter" />
+
+<div class="col-md-4">
+    <div>
+        <div class="row">
+            <img src={{selectedImage}} class="img-responsive" style="padding-left:10px;width:100%;height:250px">
+        </div>
+
+        <div class="row" style="margin-top:20px">
+            <div style="padding-left:0px">
+                <div class="col-md-3" style="padding-left:10px;padding-right:0px" ng-repeat="i in [0,1,2,3]" ng-show="selectedItem.images[i]">
+                    <a ng-click="setSelectedImage(selectedItem.images[i])" href="#"><img src={{selectedItem.images[i]}} class="img-responsive" style="width:100px;height:75px"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="padding-top:20px">
+            <button ng-click="bid()" class="btn btn-blue btn-block">Compre agora +20% do último lance</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4" style="font-size: medium">
+    <div>Último Lance : {{selectedItem.currentValue}}</div>
+    <div>Selecione seu lance</div>
+    <div class="row">
+        <div class="col-md-2">
+            <button ng-disabled="valueInMinimumBind()" ng-click="minusValueInBid()" class="btn btn-blue btn-sm mdi-content-remove" style="margin-top:7px"></button>
+        </div>
+
+        <div class="col-md-2" style="padding-left:0px;padding-right:0px">
+            <input type="text" class="form-control" style="font-size:medium;font-weight: bold" ng-disabled="true" ng-model="newBid">
+        </div>
+
+        <div class="col-md-2">
+            <button ng-click="addValueInBid()" class="btn btn-blue btn-sm mdi-content-add" style="margin-top:7px"></button>
+        </div>
+    </div>
+
+    <div>Marca : {{selectedItem.brand}}</div>
+    <div>Modelo : {{selectedItem.model}}</div>
+    <div>Final Placa : {{selectedItem.plate}}</div>
+    <div>Combustível : {{selectedItem.fuel}}</div>
+    <div>Inf. Adicionais : {{selectedItem.addInformation}}</div>
+    <div>Cod : {{selectedItem.id}}</div>
+
+    <div id="separator" class="row fix-separator"></div>
+
+    <div  class="col-md-10">
+        <h2>Historico de Lances</h2>
+        <hr class="whiter" />
+        <div class="row">
+            <table class="table">
+                <thead>
+                <tr role="row">
+                    <th class="text-center">
+                        Cod
+                    </th>
+                    <th class="text-center">
+                        Data
+                    </th>
+                    <th class="text-center">
+                        Valor
+                    </th>
+                </tr>
+                </thead>
+                <tbody ng-repeat="bid in bidHistory">
+                <tr>
+                    <td class="text-center">
+                        <span> {{bid.cod}}</span>
+                    </td>
+                    <td class="text-center">
+                        <span> {{bid.data}}</span>
+                    </td>
+                    <td class="text-center">
+                        R$ <span class="item-price">{{bid.valor}}</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4" style="font-size: medium">
+    <div>Opcionais:</div>
+    <div class="row" style="font-size: small">
+        <div class="col-md-6">Item 01</div>
+        <div class="col-md-6">Item 02</div>
+        <div class="col-md-6">Item 03</div>
+        <div class="col-md-6">Item 04</div>
+        <div class="col-md-6">Item 05</div>
+        <div class="col-md-6">Item 06</div>
+        <div class="col-md-6">Item 07</div>
+        <div class="col-md-6">Item 08</div>
+        <div class="col-md-6">Item 09</div>
+        <div class="col-md-6">Item 10</div>
+        <div class="col-md-6">Item 11</div>
+        <div class="col-md-6">Item 12</div>
+        <div class="col-md-6">Item 13</div>
+        <div class="col-md-6">Item 14</div>
+        <div class="col-md-6">Item 15</div>
+        <div class="col-md-6">Item 16</div>
+        <div class="col-md-6">Item 17</div>
+        <div class="col-md-6">Item 18</div>
+        <div class="col-md-6">Item 19</div>
+    </div>
+</div>
